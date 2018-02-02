@@ -12,7 +12,7 @@ ENV CHROME_VERSION 530821
 RUN export DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
  && apt-get install -y --no-install-recommends \
-        python-pip python-dev iptables \
+        python-pip python-dev iptables zip \
         openjdk-7-jre \
         unzip libpangocairo-1.0-0 libtk8.6 libx11-6 libx11-xcb1 libgtk-3-0 libxcomposite1 libgconf-2-4 libasound2 \
  \
