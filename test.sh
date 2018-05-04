@@ -22,5 +22,3 @@ ${DOCKER_RUN} docker --version && echo -e "OK\n"
 
 echo -n "Check Docker server: "
 ${DOCKER_RUN} docker-containerd --version && echo -e "OK\n"
-
-
