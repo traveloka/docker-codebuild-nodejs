@@ -24,6 +24,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && rm docker.tgz \
  \
  && curl -sL -o chrome-linux.zip https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/${CHROME_VERSION}/chrome-linux.zip \
+ && ln -s /opt/chrome-linux/chrome /usr/bin/chrome \
  && unzip chrome-linux.zip -d /opt \
  && rm chrome-linux.zip \
  \

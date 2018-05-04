@@ -12,7 +12,7 @@ echo -n "Check yarn: "
 ${DOCKER_RUN} yarn --version && echo -e "OK\n"
 
 echo -n "Check chrome browser: "
-${DOCKER_RUN} /opt/chrome-linux/chrome --version && echo -e "OK\n"
+${DOCKER_RUN} chrome --version && echo -e "OK\n"
 
 echo -n "Check aws cli: "
 ${DOCKER_RUN} aws --version && echo -e "OK\n"
