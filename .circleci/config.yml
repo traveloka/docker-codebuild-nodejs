@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker:stable
+    working_directory: /workdir
+    steps:
+      - checkout
+
+      - setup_remote_docker
+
+      - run: docker build -t traveloka/codebuild-nodejs:latest .
+      
+      - run: sh test.sh traveloka/codebuild-nodejs:latest
