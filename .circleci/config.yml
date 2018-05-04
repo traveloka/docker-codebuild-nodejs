@@ -11,4 +11,4 @@ jobs:
 
       - run: docker build -t traveloka/codebuild-nodejs:latest .
       
-      - run: sh test.sh traveloka/codebuild-nodejs:latest
+      - run: ./test.sh traveloka/codebuild-nodejs:latest

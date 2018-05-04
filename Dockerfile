@@ -1,13 +1,14 @@
-FROM node:8.9.4
+# https://hub.docker.com/r/_/node/
+FROM node:8.11.1
 
 # https://download.docker.com/linux/static/stable/x86_64/
-ENV DOCKER_VERSION 17.12.0-ce
+ENV DOCKER_VERSION 18.03.1-ce
 
 # https://pypi.python.org/pypi/awscli
-ENV AWS_CLI_VERSION 1.14.29
+ENV AWS_CLI_VERSION 1.15.13 
 
 # https://download-chromium.appspot.com/
-ENV CHROME_VERSION 530821
+ENV CHROME_VERSION 556029
 
 RUN export DEBIAN_FRONTEND=noninteractive \
  && apt-get update \

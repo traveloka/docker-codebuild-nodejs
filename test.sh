@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+set -euo pipefail
 
 IMAGE_NAME="${1}"
 DOCKER=$(which docker)
