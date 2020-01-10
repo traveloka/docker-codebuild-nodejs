@@ -1,14 +1,14 @@
 # https://hub.docker.com/r/_/node/
-FROM node:8.14-jessie
+FROM node:12
 
 # https://download.docker.com/linux/static/stable/x86_64/
-ENV DOCKER_VERSION 18.06.1-ce
+ENV DOCKER_VERSION 19.03.5
 
 # https://pypi.python.org/pypi/awscli
-ENV AWS_CLI_VERSION 1.16.78
+ENV AWS_CLI_VERSION 1.16.314
 
 # https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2FLAST_CHANGE?alt=media
-ENV CHROME_VERSION 617818
+ENV CHROME_VERSION 730065
 
 RUN export DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
@@ -25,5 +25,6 @@ RUN curl -fL -o docker.tgz "https://download.docker.com/linux/static/stable/x86_
 
 RUN curl -sL -o chrome-linux.zip https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/${CHROME_VERSION}/chrome-linux.zip \
  && ln -s /opt/chrome-linux/chrome /usr/bin/chrome \
+ && ln -s /opt/chrome-linux/chrome /usr/bin/google-chrome \
  && unzip chrome-linux.zip -d /opt \
  && rm chrome-linux.zip
